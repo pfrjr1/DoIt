@@ -36,6 +36,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Do It" id="TtN-Ke-rra">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Toy-jB-bew"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cPt-6t-Y4d">
                             <connections>
                                 <action selector="plusTapped:" destination="BYZ-38-t0r" id="Djv-GF-Ks0"/>
@@ -44,7 +45,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cj5-Ed-FaH" id="4em-KD-ueJ"/>
-                        <segue destination="UTa-9j-9Wd" kind="show" id="hk4-pP-x1S"/>
+                        <segue destination="UTa-9j-9Wd" kind="show" identifier="addSegue" id="hk4-pP-x1S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -65,38 +65,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lGh-0k-lCh">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lGh-0k-lCh">
                                 <rect key="frame" x="166.5" y="84" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-FB-1Eu">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-K4-QNn">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-K4-QNn">
                                 <rect key="frame" x="164.5" y="153" width="67" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cks-xx-WFK">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
-                                        <state key="normal" title="Complete"/>
-                                        <connections>
-                                            <action selector="completeTapped:" destination="hbn-qw-MYx" eventType="touchUpInside" id="ihv-84-xXL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Cks-xx-WFK" firstAttribute="centerX" secondItem="QKG-K4-QNn" secondAttribute="centerX" id="Q3o-eW-0Z6"/>
-                                    <constraint firstItem="Cks-xx-WFK" firstAttribute="centerX" secondItem="QKG-K4-QNn" secondAttribute="centerX" id="cGv-8g-LYb"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cks-xx-WFK">
+                                <rect key="frame" x="154" y="223" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="hbn-qw-MYx" eventType="touchUpInside" id="ihv-84-xXL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-FB-1Eu">
+                                <rect key="frame" x="157" y="122" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Cks-xx-WFK" firstAttribute="top" secondItem="EyG-FB-1Eu" secondAttribute="bottom" constant="25" id="E2n-yR-Pbk"/>
+                            <constraint firstItem="Cks-xx-WFK" firstAttribute="centerX" secondItem="KXY-LE-YAk" secondAttribute="centerX" id="56Y-zW-fwh"/>
+                            <constraint firstItem="EyG-FB-1Eu" firstAttribute="centerX" secondItem="KXY-LE-YAk" secondAttribute="centerX" id="KVm-8L-1Wq"/>
+                            <constraint firstItem="EyG-FB-1Eu" firstAttribute="top" secondItem="lGh-0k-lCh" secondAttribute="bottom" constant="20" id="NFm-F1-lc4"/>
+                            <constraint firstItem="Cks-xx-WFK" firstAttribute="top" secondItem="EyG-FB-1Eu" secondAttribute="bottom" constant="25" id="rEi-ch-0Ib"/>
                         </constraints>
                     </view>
                     <connections>

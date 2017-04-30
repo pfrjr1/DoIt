@@ -13,6 +13,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath) {
+        
+        selectedIndex = indexPath.row
         let task = tasks[indexPath.row]
         performSegue(withIdentifier: "selectTaskSegue", sender: task)
     }
@@ -81,6 +84,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let nextVC = segue.destination as!
             CompleteTaskViewController
             nextVC.task = sender as! Task
+            nextVC.previousVC = self
         }
     
     }

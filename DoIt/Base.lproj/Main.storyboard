@@ -46,11 +46,66 @@
                     <connections>
                         <outlet property="tableView" destination="cj5-Ed-FaH" id="4em-KD-ueJ"/>
                         <segue destination="UTa-9j-9Wd" kind="show" identifier="addSegue" id="hk4-pP-x1S"/>
+                        <segue destination="hbn-qw-MYx" kind="show" identifier="selectTaskSegue" id="755-TN-f44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="qcg-Dz-xSq">
+            <objects>
+                <viewController id="hbn-qw-MYx" customClass="CompleteTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kj6-NC-iUX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cot-Gd-AHz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KXY-LE-YAk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lGh-0k-lCh">
+                                <rect key="frame" x="166.5" y="84" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-FB-1Eu">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-K4-QNn">
+                                <rect key="frame" x="164.5" y="153" width="67" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cks-xx-WFK">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                        <state key="normal" title="Complete"/>
+                                        <connections>
+                                            <action selector="completeTapped:" destination="hbn-qw-MYx" eventType="touchUpInside" id="ihv-84-xXL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Cks-xx-WFK" firstAttribute="centerX" secondItem="QKG-K4-QNn" secondAttribute="centerX" id="Q3o-eW-0Z6"/>
+                                    <constraint firstItem="Cks-xx-WFK" firstAttribute="centerX" secondItem="QKG-K4-QNn" secondAttribute="centerX" id="cGv-8g-LYb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cks-xx-WFK" firstAttribute="top" secondItem="EyG-FB-1Eu" secondAttribute="bottom" constant="25" id="E2n-yR-Pbk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taskLabel" destination="KXY-LE-YAk" id="iSY-go-dGf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSk-33-BkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386" y="772"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="woQ-vA-RQE">
